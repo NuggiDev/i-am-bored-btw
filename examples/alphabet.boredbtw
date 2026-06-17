@@ -1,3 +1,4 @@
+; Modified work copyright (C) 2026
 ; Example program that prints the alphabet.
 
 ; The first byte of the working memory will store the next letter to print.
@@ -19,21 +20,21 @@ bored bored bored bored bored bored bored bored bored bored
 bored bored bored bored bored bored
 
 ; Loops 26 times.
-the
+way
     ; Switch data pointer back to letter.
     am
     ; Print letter.
-    btw
+    by
     ; Set next letter.
     bored
     ; Switch data pointer to loop counter.
     i
     ; Decrement loop counter.
     btw
-way
+sleep
 
 ; Value pointed to by data pointer is now 0. Set it to 10 (ASCII value of '\n').
 bored bored bored bored bored bored bored bored bored bored
 
 ; Print new line.
-btw
+by

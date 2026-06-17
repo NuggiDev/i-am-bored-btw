@@ -1,0 +1,18 @@
+// Copyright (C) 2022 OverMighty
+// Modified work copyright (C) 2026
+// SPDX-License-Identifier: GPL-3.0-only
+
+#ifndef IABB_VERSION_H
+#define IABB_VERSION_H
+
+// Major version of libiabb.
+#define IABB_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+// Minor version of libiabb.
+#define IABB_VERSION_MINOR @PROJECT_VERSION_MINOR@
+// Patch version of libiabb.
+#define IABB_VERSION_PATCH @PROJECT_VERSION_PATCH@
+
+// libiabb version string.
+#define IABB_VERSION_STRING "libiabb @PROJECT_VERSION@"
+
+#endif

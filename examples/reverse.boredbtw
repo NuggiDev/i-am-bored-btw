@@ -1,22 +1,23 @@
+; Modified work copyright (C) 2026
 ; Example program that reads a line of text then prints it in reverse.
 
 ; Decrement value pointed to by data pointer by 10 (ASCII value of '\n').
 btw btw btw btw btw btw btw btw btw btw
 
 ; Keep reading into working memory until a new line character is encountered.
-the
+way
     ; Increment value pointed to by data pointer back to its original value.
     bored bored bored bored bored bored bored bored bored bored
     ; Read a character into the next byte of memory.
-    i by
+    i the
     ; Decrement it by 10 ('\n') so that when we read a new line, the value
     ; pointed to by the data pointer at the end of the loop iteration will be 0,
     ; and the loop will stop.
     btw btw btw btw btw btw btw btw btw btw
-way
+sleep
 
 ; Print the line in reverse.
-am the btw am way
+am way by am sleep
 
 ; Print new line.
-bored bored bored bored bored bored bored bored bored bored btw
+bored bored bored bored bored bored bored bored bored bored by
