@@ -1,27 +1,38 @@
-
-
-name: Release Binary
+name: Build and Release Linux Binary
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - 'v*'
+permissions:
+  contents: write
 jobs:
-  build:
+  build-linux:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Source
+      - name: Checkout source code
         uses: actions/checkout@v4
-      - name: Configure and Build
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake build-essential
+      - name: Configure and Build (x64)
         run: |
           cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
           cmake --build build --config Release
-          
-      - name: Rename Binary
+      - name: Stage x64 Binary
         run: |
-          mv build/cmd/iabb build/cmd/i-am-bored-btw
-          
-      - name: Upload Binary to Release
+          if [ -f build/cmd/i-am-bored-btw ]; then
+            cp build/cmd/i-am-bored-btw ./i-am-bored-btw-x64
+            echo "✅ Saved x64 binary to root as i-am-bored-btw-x64"
+          else
+            echo "❌ Build failed to produce i-am-bored-btw"
+            exit 1
+          fi
+      - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: build/cmd/i-am-bored-btw
+          files: ./i-am-bored-btw-x64
+          generate_release_notes: true
+          name: "i-am-bored-btw ${{ github.ref_name }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
