@@ -1,0 +1,6 @@
+; Example program that prints the ASCII null character ('\0').
+
+i am bored btw bored
+
+; Just `btw` would also work, but would not remind those reading your code that
+; you are bored btw for the millionth time.

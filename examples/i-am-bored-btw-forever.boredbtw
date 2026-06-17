@@ -1,0 +1,27 @@
+; Example program that prints "I am bored btw" forever.
+
+; Write string "I am bored btw\n" at start of working memory.
+
+; 'I'
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored i
+; ' '
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+i
+; 'a'
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored i
+; 'm'
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored bored
+bored bored bored bored bored bored bored bored bored bored bored bored i
