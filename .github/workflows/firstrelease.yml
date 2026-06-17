@@ -1,29 +1,27 @@
 
-name: Release Binary
 
+name: Release Binary
 on:
   release:
     types: [published]
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
-
       - name: Configure and Build
         run: |
-          ls -R
           cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
           cmake --build build --config Release
           
-
+      - name: Rename Binary
+        run: |
+          mv build/cmd/iabb build/cmd/i-am-bored-btw
+          
       - name: Upload Binary to Release
         uses: softprops/action-gh-release@v2
         with:
-          # This renames 'iabb' (the built binary) to 'i-am-bored-btw' 
-          # as it gets uploaded to the release
-          files: build/cmd/iabb=i-am-bored-btw
+          files: build/cmd/i-am-bored-btw
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
